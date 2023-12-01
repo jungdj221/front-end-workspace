@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>폼 태그</title>
+  </head>
+  <body>
+    <h2>폼 태그의 기본 구조</h2>
+
+    <h3>검색 폼</h3>
+    <form action="" name="search_form" method="GET"></form>
+    <label>검색할 내용 : <input type="text" name="keyword" /></label>
+    <input type="submit" value="검색" />
+
+    <h3>회원가입 폼</h3>
+    <form action="" name="signup_form" method="POST">
+      <fieldset>
+        <legend>회원정보</legend>
+        <label for="userId">아이디 : </label
+        ><input type="text" id="userId" required autofocus />
+        <!--필수값은 required꼭 넣어야 함.-->
+        <br /><br />
+        <label for="">패스워드</label>
+        <input
+          type="password"
+          id="userPwd"
+          name="userPwd"
+          placeholder="패스워드를 입력하세요"
+        />
+      </fieldset>
+      <fieldset>
+        <legend>배송정보</legend>
+        <label for="">수령인 : </label>
+        <input
+          type="text"
+          id="userName"
+          name="userName"
+          value="pigeon"
+          readonly
+        /><!-- readonly : value가 고정됨 바꿀수없음-->
+        <br /><br />
+        <label for="addr">주소 : </label>
+        <input type="text" id="addr" name="addr" />
+      </fieldset>
+      <input type="submit" value="회원가입" />
+    </form>
+
+    <hr />
+
+    <h3>type="radio|checkbox"</h3>
+    <!-- | enter위에 있음-->
+    <form action="">
+      <legend>성별</legend>
+      <!-- 확실한 value값을 정해주어야 함-->
+      <input type="radio" name="gender" value="male" /> 남자<br />
+      <input type="radio" name="gender" value="female" /> 여자
+      <fieldset>
+        <input type="submit" value="전송" />
+      </fieldset>
+      <fieldset>
+        <legend>관심사</legend>
+        <label
+          ><input type="checkbox" name="interest" value="pet" /> 반려동물</label
+        ><br />
+        <label
+          ><input type="checkbox" name="interest" value="sing" checked />
+          노래</label
+        ><br />
+        <!--chekced : 미리 체크가 된상태에서 시작-->
+        <label
+          ><input type="checkbox" name="interest" value="drama" /> 드라마</label
+        ><br />
+        <label
+          ><input type="checkbox" name="interest" value="e-sports_view" />
+          E스포츠시청</label
+        >
+        <br />
+        <label
+          ><input type="checkbox" name="interset" value="game" /> 게임</label
+        ><br />
+        <!--한번도 말하자면 라벨은 글자눌러도 표시가 되는거-->
+      </fieldset>
+
+      <input type="submit" value="전송" />
+    </form>
+  </body>
+</html>

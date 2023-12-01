@@ -1,40 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>목록태그</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- ul (unordered List)-->
     <h2>ul : 순서없는 목록 태그</h2>
     <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
     </ul>
 
-    <h3>중첩으로도 가능</h3>
+    <h3><mark>중첩으로도 가능</mark></h3>
     <ul>
+      <!--Visual Studio allows users to shortcut by ul*n(줄 몇개라는 뜻)-->
+      <!-- ul>li*2(몇 안에 줄 몇개)-->
+      <ul>
+        <li>111</li>
+        <li>222</li>
+      </ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
 
-        <!--Visual Studio allows users to shortcut by ul*n(줄 몇개라는 뜻)-->
-        <!-- ul>li*2(몇 안에 줄 몇개)-->
-        <ul>    
-            <li>111</li>
-            <li>222</li>
-        </ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
+    예시2
+    <!-- ul>li*3 -->
+    <ul>
+      <li>ddd</li>
+      <ul>
+        <!-- 중첩과정 -->
+        <li>dd</li>
+        <li>dd</li>
+      </ul>
+      <li>ddd</li>
+      <li>ddd</li>
     </ul>
 
     <!-- ol (Ordered List)-->
-    <h2>ol : 순서 있는 목록 태그</h2>
+    <h2><mark> ol : 순서 있는 목록 태그</mark></h2>
     <!-- ol>li*3-->
     <ol>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
     </ol>
 
     <!--
@@ -42,21 +54,21 @@
         - type : 항목 앞에 표시되는 숫자의 종류 변경( a : 알파벳)
     -->
     <ol start="5" type="a">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
     </ol>
 
     <!--
         - reversed : 항목을 역순으로 표시( 속성값 없음)
     -->
     <ol reversed>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
     </ol>
-    
-    <hr>
+
+    <hr />
 
     <h2>dl : 설명과 관련된 목록 태그(주로 용어에 대해 정의할 때)</h2>
 
@@ -66,12 +78,11 @@
         - dd(Definition Description) : 정의 목록의 항목
     -->
     <dl>
-        <dt>HTML5</dt>
-        <dd>HTML5는 웹에서 정보를 표한할 목적으로 만든 마크업 언어다.</dd>
-        <dt>CSS3</dt>
-        <dd>HTML5와 함께 웹 표준의 하나다.</dd>
-        <dd>미리 약속된 스타일 속성을 사용해서 레이아웃과 스타일을 정의한다.</dd>
+      <dt>HTML5</dt>
+      <dd>HTML5는 웹에서 정보를 표한할 목적으로 만든 마크업 언어다.</dd>
+      <dt>CSS3</dt>
+      <dd>HTML5와 함께 웹 표준의 하나다.</dd>
+      <dd>미리 약속된 스타일 속성을 사용해서 레이아웃과 스타일을 정의한다.</dd>
     </dl>
-
-</body>
+  </body>
 </html>
