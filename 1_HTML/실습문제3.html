@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>폼 실습</title>
+  </head>
+  <body>
+    <h1>주문하기</h1>
+    <form action="" name="piza_order" method="POST">
+      <label for="username">고객명 : <input type="text" id="username" required/></label><br /><br />
+      <label for="tel">전화번호 : <input type="text" id="tel" required/></label><br /><br />
+      <label for="email">E-mail : <input type="email" id="mail" required/></label><br /><br />
+    
+
+   
+      <fieldset>
+        <legend>피자 사이즈</legend>
+        <input type="radio" name="size" value="small" />Small<br /><br />
+        <input type="radio" name="size" value="Medium" />Medium<br /><br />
+        <input type="radio" name="size" value="Large" />Large
+      </fieldset>
+    
+
+    <form action="">
+      <fieldset>
+        <legend>토핑선택</legend>
+        <input type="checkbox" name="ingredient" value="bacon" />베이컨<br /><br />
+        <input type="checkbox" name="ingredient" value="cheese" />치즈<br /><br />
+        <input type="checkbox" name="ingredient" value="onion" />양파<br /><br />
+        <input type="checkbox" name="ingredient" value="mushroom" />버섯
+      </fieldset>
+   
+
+   
+      <label>희망 배송 시간 : </label>
+      <input type="time" /><br><br>
+
+
+
+    <header>배송시 요청사항</header>
+      <textarea
+        name=""
+        id=""
+        cols="30"
+        rows="10"
+        style="resize: none"
+        placeholder="내용을 입력하세요."
+      ></textarea><br><br>
+      
+      <input type="submit" value="주문하기">
+    </form>
+  </body>
+</html>
