@@ -134,3 +134,48 @@ button:disabled {
 button:enabled {
   background: violet;
 }
+
+/* 11. 구조 선택자 */
+#test3 li:first-child {
+  /* 첫번째 요소*/
+  background: salmon;
+}
+/* 해당 유형 중 첫번째 요소 */
+#test3 p:first-of-type {
+  color: black;
+}
+#test3 li:last-child {
+  background: skyblue;
+}
+/* 해당 유형 중 마지막 요소 */
+#test3 li:last-of-type {
+  color: brown;
+}
+/* 2n+1, even, odd등 ()안에 넣을 수 있음. */
+#test3 li:nth-child(even) {
+  background: darkcyan;
+}
+/* 해당 유형 중 몇번째 요소? */
+#test3 li:nth-of-type(2) {
+  color: silver;
+}
+/* 뒤에서 부터 몇번째 요소 */
+#test3 li:nth-last-child(4) {
+  background: hotpink;
+}
+/* 뒤에서부터 해당 유형 중 몇번쨰 요소 */
+#test3 li:nth-last-of-type(3) {
+  background: seagreen;
+}
+
+/* 12. 가상 요소 선택자 */
+#test4 p::before {
+  content: "앞";
+  color: blue;
+  background: yellow;
+}
+#test4 p::after {
+  content: "뒤";
+  color: white;
+  background: black;
+}
