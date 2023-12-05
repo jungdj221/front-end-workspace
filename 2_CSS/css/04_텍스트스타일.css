@@ -138,3 +138,59 @@
   /* pre-wrap : 여러개의 공백을 그대로 표시 */
   white-space: pre-wrap;
 }
+/* letter-spacing */
+#ls {
+  letter-spacing: 10px;
+  letter-spacing: 1.8rem;
+}
+/* word-spacing */
+#ws {
+  word-spacing: 20px;
+}
+
+/* text-align */
+#ta1 {
+  text-align: left;
+}
+#ta2 {
+  text-align: right;
+}
+#ta3 {
+  text-align: center;
+}
+#ta4 {
+  text-align: justify;
+}
+/* text-indent */
+#ti {
+  text-indent: 10px;
+}
+/* line-height */
+#lh {
+  line-height: 40px;
+  line-height: 1.8;
+}
+/* text-overflow */
+/* - clip (기본값) ; 영약을 넘어가는 텍스트를 자른다.
+    - ellipsis : 말 줄임으로 잘린 텍스트를 표현한다    
+*/
+#to {
+  background-color: beige;
+  width: 500px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* list-style(-type) */
+/* - disc (defualt set) : 채워진 원 모영 불렛
+   - circle : 빈 원 모양
+   - square : 체운 사각형
+   - **none** : 불렛없앰.
+*/
+#list1 {
+  list-style: disc;
+  list-style: circle;
+  list-style: square;
+  list-style: none;
+}
