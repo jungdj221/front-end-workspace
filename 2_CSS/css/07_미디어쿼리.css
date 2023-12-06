@@ -1,0 +1,65 @@
+body,
+p,
+h3 {
+  margin: 0;
+}
+.container {
+  background-color: cornflowerblue;
+}
+#con-1 {
+  font-size: 0;
+}
+#con-2::after {
+  content: "Clear!";
+  clear: both;
+  visibility: hidden;
+  display: block;
+}
+
+.item-inline-block {
+  display: inline-block;
+  font-size: 1rem;
+  vertical-align: top;
+}
+.item-style-1 {
+  background-color: aqua;
+  width: 40%;
+}
+.item-style-2 {
+  background-color: antiquewhite;
+  width: 60%;
+}
+footer {
+  background-color: darkgray;
+  padding: 5%;
+  clear: both;
+}
+.item-float {
+  float: left;
+}
+
+/* .item-mediaquery {
+  float: left;
+} */
+
+/* 미디어쿼리 */
+/* 
+    700px 아래에 해당하는 화면 적용
+*/
+/* 700px 이상부터 적용 */
+@media screen and (min-width: 700px) {
+  #con3-::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+  .item-mediaquery {
+    float: left;
+  }
+}
+/* 1200px부터 적용 */
+@media screen and (min-width: 1200px) {
+  body {
+    background: red;
+  }
+}

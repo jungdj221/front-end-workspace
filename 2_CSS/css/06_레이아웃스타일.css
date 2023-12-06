@@ -127,3 +127,46 @@
   height: 100px;
   background-color: blue;
 }
+/* visibility */
+.visibility {
+  border: 1px solid;
+  width: 100px;
+  height: 100px;
+}
+#vis1 {
+  visibility: hidden;
+  /* 화면에서는 없애나, 여전히 공간을 차지하고 있음 */
+  display: none;
+  /* 화면에서 아예 없애버림 */
+  background-color: beige;
+}
+#vis2 {
+  background-color: skyblue;
+}
+/* z-index */
+#z-outer {
+  position: relative;
+  height: 250px;
+}
+.z-index {
+  width: 150px;
+  height: 150px;
+  border: 1px solid;
+  position: absolute;
+}
+#z-index1 {
+  background-color: orange;
+  top: 100px;
+  left: 100px;
+  z-index: 2;
+}
+#z-index2 {
+  background-color: blueviolet;
+  top: 50px;
+  left: 50px;
+  z-index: 10;
+}
+#z-index3 {
+  background-color: green;
+  z-index: -1;
+}

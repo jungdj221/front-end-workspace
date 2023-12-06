@@ -1,0 +1,47 @@
+/* 시작 전 모든 여백 없애기 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* 배경 색 입히기 */
+body {
+  background-color: lightsalmon;
+}
+.profile-card {
+  background-color: white;
+  width: 400px;
+  margin: 30px auto;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+}
+.profile-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  /* object-fit: cover 비율맞게 맞춰줌 */
+  border-radius: 50%;
+}
+.profile-card h1 {
+  font-size: 1.5rem;
+  color: grey;
+  margin-top: 5px;
+}
+.profile-card a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  background: lightsalmon;
+  padding: 15px;
+  margin: 15px 0;
+}
+body {
+  background-color: lightsalmon;
+  height: 100vh;
+  padding: 40px;
+  /* background: linear-gradient(purple, pink); */
+}
+.profile-card a:hover {
+  background-color: black;
+}
