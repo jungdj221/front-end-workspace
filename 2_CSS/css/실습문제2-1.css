@@ -1,47 +1,9 @@
-/* 시작전 공백 없애기 */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-/* 배경 색 입히기 */
-body {
-  background-color: lightsalmon;
-}
-/* 흰색 카드 만들기 */
-.profile-card {
-  background-color: white;
-  width: 400px;
-  margin: 50px auto;
-  border-radius: 10px;
-  text-align: center;
-  padding: 20px;
-  box-sizing: border-box;
-}
-/* 푸바로 동그라미 */
-#pubao_round {
-  border-radius: 50%;
-  text-align: center;
-}
-/* @푸바오 조정 */
-h1 {
-  text-align: center;
-}
 
-/* Github, instagram 조정 */
-#github {
-  background-color: lightsalmon;
-  text-decoration: none;
-  color: white;
-  text-align: center;
-}
-#instagram {
-  background-color: lightsalmon;
-  text-decoration: none;
-  color: white;
-  text-align: center;
-}
-/* 두개의 하이퍼링크 아래로 정렬 */
-.list {
-  display: block;
+.profil-card img {
+  width: 200px;
 }
