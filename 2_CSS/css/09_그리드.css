@@ -37,3 +37,18 @@
   grid-row: 2/4;
   grid-column: 1/3;
 }
+
+/* 6. justify0items, align-items */
+.container {
+  justify-items: start;
+  justify-items: center;
+  justify-items: end;
+
+  align-items: start;
+  align-items: center;
+  align-items: end;
+}
+.item:nth-child(6) {
+  justify-self: center;
+  align-self: center;
+}

@@ -378,6 +378,12 @@ rgb(red(0~255), green(0~255), blue(0~255), alpha(0~1));
 - 통제를 벗어낫 위치에 있는 트랙의 크기를 지정하는 속성
 
 ```css
+.container {
+  grid-auto-rows: minmax(200px, auto);
+}
+```
+
+```css
 .item {
   grid-column: 1/4;
   grid-column-start: 1;
@@ -386,5 +392,33 @@ rgb(red(0~255), green(0~255), blue(0~255), alpha(0~1));
   grid-row: 2/4;
   grid-row-start: 2;
   grid-row-end: 4;
+}
+```
+
+## justify-items, align-items
+
+- 셀들의 정렬을 지정하는 속성
+
+```css
+/_ 6. justify0items,
+align-items _/ .container {
+  justify-items: start;
+  justify-items: center;
+  justify-items: end;
+
+  align-items: start;
+  align-items: center;
+  align-items: end;
+}
+```
+
+## justify-self, align-self
+
+- 각 하나의 셀의 정렬을 지저하는 속성
+
+```css
+.item:nth-child(6) {
+  justify-self: start or end center;
+  align-self: start or end or center;
 }
 ```
