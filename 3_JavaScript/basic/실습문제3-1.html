@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+        Q1. 킬로그램(kg)을 파운드(lb)로 환산하여 console에 출력하시오.
+           - 파운드 = 킬로그램 * 2.2
+           예) 킬로그램 : 60  
+     -->
+    <script>
+      const lb = 2.2;
+      const kg = 60;
+      let message = "파운드 값: ";
+      let answer1_1 = "lb";
+      console.log(message + kg * lb + answer1_1);
+    </script>
+
+    <!--
+        Q2. 제곱미터를 평으로 환산하여 console에 출력하시오.
+           - 평 = 제곱미터 * 0.3
+           예) 제곱미터 : 99
+    -->
+    <script>
+      const cubric = 99;
+      const pyeong = 0.3;
+      let answer2 = "몇평? : ";
+      let answer2_1 = "평";
+      console.log(answer2 + cubric * pyeong + answer2_1);
+    </script>
+
+    <!-- 
+        Q3. 사다리꼴의 넓이를 구하여 console에 출력하시오.
+           - 사다리꼴의 넓이 = (윗변 길이 + 밑변 길이) / 2 * 높이
+           예) 윗변 : 10, 밑변 : 14, 높이 : 4
+     -->
+    <script>
+      const bottom = 14;
+      const upper = 10;
+      const height = 4;
+      let answer3 = "넓이 : ";
+      console.log(answer3 + (height * (bottom + upper)) / 2);
+    </script>
+
+    <!-- 
+        Q4. 정기예금을 은행에 예치했을 때 수령하는 월 이자를 계산하여 console에 출력하시오. 단, 년 이율은 4%로 가정한다. 
+           - 월 이자 = 정기 예금액 * 0.04 / 12
+           - 예) 정기 예금액 : 12,000,000
+    -->
+    <script>
+      const deposit = 12000000;
+      const percentage = 0.04;
+      const month = 12;
+      let answer4 = "수령액: ";
+      let answer4_1 = "원";
+      console.log("수령액: " + (deposit * percentage) / month + "원");
+    </script>
+
+    <!-- 
+        Q5. 머쓱이는 40살인 선생님이 몇 년도에 태어났는지 궁금해졌다. 나이 age가 주어질 때, 2023년을 기준 출생 연도를 console에 출력하시오.
+     -->
+    <script>
+      const age = 40;
+      const currentyear = 2023;
+      let answer5 = "출생년도는? : ";
+      let answer5_1 = "년";
+      console.log(answer5 + (currentyear - age) + answer5_1);
+    </script>
+
+    <!-- 
+        Q6. 머쓱이는 추운 날에도 아이스 아메리카노만 마신다. 아이스 아메리카노는 한잔에 5,500원이다. 
+            머쓱이가 가지고 있는 돈이 15,000원 일 때, 머쓱이가 최대로 마실 수 있는 아메리카노의 잔 수와 남는 돈을 console에 출력하시오.
+     -->
+    <script>
+      const money = 15000;
+      const spent = 5500;
+      let answer6 = "최대 잔수: ";
+      let answer6_1 = "남은돈: ";
+      let answer6_2 = "원";
+      let answer6_3 = "잔  ";
+      console.log(
+        answer6 +
+          parseInt(money / spent) +
+          answer6_3 +
+          answer6_1 +
+          (money % spent) +
+          answer6_2
+      );
+    </script>
+
+    <!-- 
+      Q7. 머쓱이네 양꼬치 가게는 10인분을 먹으면 음료수 하나를 서비스로 준다. 양꼬치는 1인분에 12,000원, 음료수는 2,000원이다. 
+          양꼬치 64인분과 음료수 6개를 먹었다면 총얼마를 지불해야 하는지 console에 출력하시오.
+     -->
+    <script>
+      const pricelamb = 12000;
+      const pricedrink = 2000;
+      const numberlamb = 64;
+      let answe7 = "총 계산 값: ";
+      let answer7_1 = "원";
+      console.log(
+        answe7 +
+          (pricelamb * numberlamb + pricedrink * parseInt(numberlamb / 10)) +
+          answer7_1
+      );
+    </script>
+  </body>
+</html>

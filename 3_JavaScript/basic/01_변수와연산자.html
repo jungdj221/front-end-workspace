@@ -51,5 +51,96 @@
       var varA = 100; //아무것도 안잡힘. 한번쓰인 기호는 다시 쓰이면 안됨.
       //let letC = "AAA"; //Uncaught SyntaxError: Identifier 'letC' has already been declared
     </script>
+    <script>
+      let message = '"안녕 이라고 말해"'; //jave script에서는 ''도 가능하긴 함
+      message = '"안녕" 이라고 말해';
+      console.log(message);
+      console.log(message[1]); // 안
+      console.log(message.length); //11
+
+      console.log("누군가에게", message);
+      console.log("누군가에게 " + message);
+      console.log(`누군가에게 ${message}`);
+
+      const name = "기린이";
+      const age = 2; //숫자는 따옴표 필요 없음
+      console.log(`안녕? 내 이름은 ${name}이고, 나이는 ${age}살`);
+    </script>
+
+    <!-- 숫자 -->
+    <script>
+      const num1 = 10;
+      const num2 = 3;
+      console.log(num1 + num2); //13
+      console.log(num1 - num2); //7
+      console.log(num1 * num2); //30
+      console.log(num1 / num2); //3.333
+      console.log(num1 % num2); //1 나머지라는 뜻
+      console.log(num1 ** num2); //제곱 10^3
+
+      //문자열 -> 숫자
+      console.log(typeof "100"); //string
+      console.log(typeof Number("100")); //number
+      console.log(Number("Hello")); //NaN
+
+      //숫자 -> 문자열
+      console.log(typeof String(200));
+
+      // 실수 -> 정수
+      console.log(parseInt(1.8));
+    </script>
+
+    <!-- undefined, null -->
+    <script>
+      let test;
+      console.log(test); //undefined - 정의되지 않음
+
+      test = null;
+      console.log(test); //null - 아무것도 없움
+    </script>
+
+    <!--  boolean과 비교 연산자 -->
+    <script>
+      console.log(true);
+      console.log(false);
+      let num3 = 100;
+      let num4 = 200;
+      console.log(num3 < num4); //true
+      console.log(num3 <= num4); //true
+
+      num4 = 100;
+      num4 = "100";
+      console.log(num3 == num4); //true
+      console.log(num3 != num4); //false
+
+      //데이터 타입까지 체크
+      console.log(num3 === num4); //true ->false
+      console.log(num3 !== num4); //false ->true
+
+      //다른 자료형 -> Boolean
+      //false : 0, NaN, "", null, undefined
+      // 나머지는 true
+      console.log(Boolean(0)); //false
+      console.log(Boolean(1)); //true
+    </script>
+
+    <!-- 논리 연산자 -->
+    <script>
+      const a = 100;
+      const b = 200;
+
+      // && : and
+      console.log(a < 200 && a == 100); //true && true = true
+      console.log(a > 200 && a == 100); //false &7 true =false
+
+      // || : 또는(or)
+      console.log(a > 200 || a == 100); //false || true = ture
+      console.log(a > 200 || a != 100); //false || false =false
+
+      // ! : 아니다(in Python, not)
+      console.log(!true); //false
+      console.log(!false); //true
+      console.log(!!(a > b)); //false
+    </script>
   </body>
 </html>
