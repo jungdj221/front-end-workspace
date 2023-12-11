@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01_Java</title>
+    <script>
+      // 출력
+      //   document.write(111);
+      //   console.log(222); //window.console window는 생략해도됨.
+      //   alert(333);
+    </script>
+    <script src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/4602e82315.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <i class="fa-brands fa-youtube"></i>
+    <i class="fa-solid fa-folder"></i>
+
+    <h1>변수</h1>
+    <p>어떠한 값을 저장하는 공간</p>
+    <!-- var, const, let -->
+    <script>
+      //옛날방식 - 거의사용 x
+      var varA = 100; // var 변수 = 값;
+      console.log(varA); //100
+      varA = "ㅋㅋㅋ";
+      console.log(varA); //ㅋㅋㅋ
+
+      // 상수 - 값 수정 불가. (자주)
+      const constB = 200;
+      console.log(constB); //200
+      //constB = "300"; // Uncaught TypeError:
+
+      //변수 - 값을 수정할 수 있다. (가끔)
+      let letC = 300;
+      console.log(letC);
+      letC = "zzz";
+      console.log(letC); //zzz
+
+      // typeof : 데이터 타입 확인
+      console.log(typeof constB); //number
+      console.log(typeof letC); //string
+    </script>
+    <!-- 기본 데이터 타임 -->
+    <!-- 문자열 -->
+    <script>
+      var varA = 100; //아무것도 안잡힘. 한번쓰인 기호는 다시 쓰이면 안됨.
+      //let letC = "AAA"; //Uncaught SyntaxError: Identifier 'letC' has already been declared
+    </script>
+  </body>
+</html>
