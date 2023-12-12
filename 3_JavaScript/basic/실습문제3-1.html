@@ -6,6 +6,13 @@
     <title>Document</title>
   </head>
   <body>
+    <!-- 변수 명명 규칙
+    1) 변수명에는 문자, 숫자, 기호는 $, _만 사용
+    2) 첫글자에는 숫자 금지
+    3) 예약어(cosnt, if, switch, ...) 금지
+    4) 표기법대로 사용- camelCase(낙타표기법)
+    5) 상수(const로 표시하는 것 x)는 대문자+snake_case(언더바 표기법)
+    -->
     <!-- 
         Q1. 킬로그램(kg)을 파운드(lb)로 환산하여 console에 출력하시오.
            - 파운드 = 킬로그램 * 2.2
@@ -31,6 +38,9 @@
       let answer2_1 = "평";
       console.log(answer2 + cubric * pyeong + answer2_1);
     </script>
+    <!-- const m2=99
+    const py=m2*0.3
+  console.log(py) -->
 
     <!-- 
         Q3. 사다리꼴의 넓이를 구하여 console에 출력하시오.
@@ -41,6 +51,8 @@
       const bottom = 14;
       const upper = 10;
       const height = 4;
+      // const trape = (upper + lower)/2 *height;
+      // console.log(trape);
       let answer3 = "넓이 : ";
       console.log(answer3 + (height * (bottom + upper)) / 2);
     </script>
@@ -52,6 +64,8 @@
     -->
     <script>
       const deposit = 12000000;
+      // const monthly = (deposit *0.04) /12;
+      // console.log(monthly);
       const percentage = 0.04;
       const month = 12;
       let answer4 = "수령액: ";
@@ -64,6 +78,7 @@
      -->
     <script>
       const age = 40;
+      // console.log(2023-age);
       const currentyear = 2023;
       let answer5 = "출생년도는? : ";
       let answer5_1 = "년";
@@ -77,6 +92,9 @@
     <script>
       const money = 15000;
       const spent = 5500;
+      //최대 잔
+      // const result1=15000/5500;
+      // console.log(perseInt(result1));
       let answer6 = "최대 잔수: ";
       let answer6_1 = "남은돈: ";
       let answer6_2 = "원";
@@ -99,12 +117,23 @@
       const pricelamb = 12000;
       const pricedrink = 2000;
       const numberlamb = 64;
+      const numberdrink = 6;
       let answe7 = "총 계산 값: ";
       let answer7_1 = "원";
       console.log(
         answe7 +
-          (pricelamb * numberlamb + pricedrink *(6 - parseInt(numberlamb / 10))) +
-          answer7_1);
+          (pricelamb * numberlamb +
+            pricedrink * (numberdrink - parseInt(numberlamb / 10))) +
+          answer7_1
+      );
     </script>
+    <!-- 
+      cosnt lamb = 64;
+      const drink=6;
+      cosnt service = perseInt(lamb/10);
+      const total = labm*12000 + (drink-service) * 2000;
+      console.log(total);
+
+     -->
   </body>
 </html>
