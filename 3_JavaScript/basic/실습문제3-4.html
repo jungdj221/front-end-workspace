@@ -43,7 +43,9 @@
     </script>
 
     <!-- Q5. 1 ~ 100 정수 중 소수를 출력하세요 -->
-    <script></script>
+    <script>
+      //5번은 아예 모르겠습니다.
+    </script>
 
     <!-- Q6. 배열 안의 데이터를 모두 2배로 만들어서 출력하세요 -->
     <script>
@@ -79,7 +81,8 @@
     <script>
       const a2 = [12, 0, 2, 5, 4];
       const b2 = [0, 2, 3, 12, 8];
-    </script>
+      //이것도 잘 모르겠습니다.
+    </script> 
 
     <!-- Q10. 2차원 배열에는 3명의 학생의 4과목 성적이 들어 있습니다. 각 학생들의 합계와 평균을 출력하세요 -->
     <script>
@@ -88,6 +91,15 @@
         [87, 93, 62, 83],
         [98, 90, 77, 97],
       ];
+
+      for (let i =0;i<scores.length;i++){
+        let sum =0;
+        for (let j=0;j<scores.length;j++){
+          sum +=score[i][j];
+        }
+        console.log((i+1)+"번,  총점: "+ sum +"평균: "+ sum / 4);
+      }
+      
     </script>
   </body>
 </html>
