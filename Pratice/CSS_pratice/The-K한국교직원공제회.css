@@ -3,18 +3,21 @@
   margin: 0;
   box-sizing: border-box;
 }
+header > div {
+  display: flex;
+}
 header {
   background-color: red;
   text-align: center;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   height: 60px;
 }
-nav {
-  display: flex;
+.content-signin a {
+  background-color: aqua;
 }
-header nav a {
+header a {
   background-color: grey;
   color: white;
   display: inline-block;
@@ -28,5 +31,5 @@ header h1 {
   color: white;
   font-size: 1rem;
   font-weight: bold;
-  margin-right: 10px;
+  /* margin-right: 10px; */
 }
