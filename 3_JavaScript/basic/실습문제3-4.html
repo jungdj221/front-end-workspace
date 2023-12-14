@@ -171,9 +171,9 @@
     <!-- Q10. 2차원 배열에는 3명의 학생의 4과목 성적이 들어 있습니다. 각 학생들의 합계와 평균을 출력하세요 -->
     <script>
       const scores = [
-        [83, 90, 70, 87],
-        [87, 93, 62, 83],
-        [98, 90, 77, 97],
+        [83, 90, 70, 87], //scores[0][0~3]
+        [87, 93, 62, 83], // score[1][0~3]
+        [98, 90, 77, 97], // scores[2][0~3]
       ];
 
       for (let i = 0; i < scores.length; i++) {
@@ -183,6 +183,19 @@
         }
         console.log(i + 1 + "번,  총점: " + sum + "평균: " + sum / 4);
       }
+
+      console.log("Q10-------------------------");
+      let total = 0;
+      for (let i = 0; i < scores.length; i++) {
+        for (let j = 0; j < scores[i].length; j++) {
+          //console.log(scores[i][j]);
+          total += scores[i][j];
+        }
+        console.log(total);
+        // console.log(scores[i]);
+        total = 0;
+      }
+      console.log(`합계: ${total} / 평균: ${total / scores[i].length}`);
     </script>
   </body>
 </html>

@@ -9,6 +9,10 @@
     <!-- 테스트는 자유! -->
     <!-- Q1. 세 수의 합을 구하는 함수를 만들어 주세요. -->
     <script>
+      function add(a, b, c) {
+        return a + b + c;
+      }
+
       const add = (a, b, c) => {
         return a + b + c;
       };
@@ -21,6 +25,10 @@
     -->
     <script>
       console.log("Q2----------------------------");
+      function triagnle(width, height) {
+        return (width * height) / 2;
+      }
+
       const triangle = (a, b) => {
         return (a * b) / 2;
       };
@@ -34,6 +42,13 @@
     -->
     <script>
       console.log("Q3----------------------------");
+      function round(r) {
+        return 2 * r * 3.14;
+      }
+      function area(r) {
+        return r * r * 3.14;
+      }
+
       const round = (r) => {
         return 2 * r * 3.14;
       };
@@ -47,6 +62,14 @@
     <!-- Q4. 시작 수(n1)과 끝 수(n2)가 주어졌을 때 n1 ~ n2의 합계를 구하는 함수를 만들어 주세요 -->
     <script>
       console.log("Q4----------------------------");
+      function sum(n1, n2) {
+        let total = 0;
+        for (let i = n1; i <= n2; i++) {
+          total += i;
+        }
+        return total;
+      }
+
       const sum = (n1, n2) => {
         let total = 0;
         for (let i = n1, j = n2; i <= j; i++) {
@@ -66,6 +89,32 @@
     -->
     <script>
       console.log("Q5----------------------------");
+      //multiple return used
+      function calculate(price) {
+        if (price >= 100000) {
+          // 10만원 이상 -> 그 뒤에 나오는 조건은 다 10만원 미만
+          return price * 0.9;
+        } else if (price >= 50000) {
+          // 5만원 이상 -> 그 뒤에 나오는 조건은 다 5만원 미만
+          return price * 0.925;
+        } else if (price >= 10000) {
+          return price * 0.95;
+        }
+      }
+
+      //return을 하나만 사용
+      function calculate(price) {
+        // rate기본값을 1로 했을때 -> rate =10, 7.5 ,5
+        let rate = 0;
+        if (price > 100000) {
+          rate = 10;
+        } else if (price > 50000) {
+          rate = 7.5;
+        } else if (price > 10000) rate = 5;
+      }
+      return (price * (100 - rate)) / 100;
+
+      //내가 한거
       const calculate = (m) => {
         //금액 = 지급량 * 할인율
         if (m >= 10000 && m < 50000) {
@@ -74,12 +123,23 @@
           return m * 0.925;
         } else if (m >= 100000) {
           return m * 0.9;
-        } else {
-          return m;
         }
+        return m;
       };
       console.log("지불금액: " + calculate(20000)); // 19000
       console.log("지불금액: " + calculate(65000)); // 60125
+    </script>
+    <!--  console.log("합계")
+          console.log("합계", 12)
+          console.log("합계", 12 ,"평균") -->
+    <!-- 가변 매개변수(pararmeter) : 안씀-->
+    <script>
+      function sum(...args) {
+        console.log("sum");
+        console.log(args);
+      }
+      sum(10, 20);
+      sum(10, 20, 30);
     </script>
   </body>
 </html>
