@@ -56,15 +56,15 @@
 
     <script>
       function printValue() {
-        const result = document.querySelector("#result1");
-        const customer =
-          document.querySelector("#customer").value; /*.value 여기다 붙여도 됨*/
-        const product = document.querySelector("#product").value;
-        const price = document.querySelector("#price").value;
+        //const result = document.querySelector("#result1");
+        //const customer =
+        //document.querySelector("#customer").value; /*.value 여기다 붙여도 됨*/
+        //const product = document.querySelector("#product").value;
+        //const price = document.querySelector("#price").value;
         // console.log(customer);
         // console.log(product);
         // console.log(price);
-        result.innerHTML = `${customer}님의 ${product}, 구매가격은${price}원 입니다.`;
+        result1.innerHTML = `${customer.value}님의 ${product.value}, 구매가격은${price.value}원 입니다.`;
       }
     </script>
 
@@ -92,11 +92,11 @@
 
     <script>
       function stringLength() {
-        const result2 = document.querySelector("#result2");
-        const text1 = document.querySelector("#text1").value;
+        //const result2 = document.querySelector("#result2");
+        //const text1 = document.querySelector("#text1").value;
         //console.log(text1.length);
 
-        result2.innerHTML = `보기의 문자열 길이는 ${text1.length} 글자입니다.`;
+        result2.innerHTML = `보기의 문자열 길이는 ${text1.value.length} 글자입니다.`;
       }
     </script>
 
