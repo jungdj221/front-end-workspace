@@ -1,7 +1,7 @@
 body {
   text-align: center;
 }
-.images img {
+img {
   width: 200px;
   height: 200px;
   object-fit: cover;
@@ -15,11 +15,11 @@ button {
   border: none;
   border-radius: 5px;
   font-weight: bold;
-  margin-right: 10px;
 }
 #click {
   background-color: hotpink;
   color: navy;
+  margin-right: 10px;
 }
 #restart {
   background-color: navy;

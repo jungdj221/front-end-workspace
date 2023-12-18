@@ -56,15 +56,11 @@
 
     <script>
       function printValue() {
-        //const result = document.querySelector("#result1");
-        //const customer =
-        //document.querySelector("#customer").value; /*.value 여기다 붙여도 됨*/
-        //const product = document.querySelector("#product").value;
-        //const price = document.querySelector("#price").value;
-        // console.log(customer);
-        // console.log(product);
-        // console.log(price);
-        result1.innerHTML = `${customer.value}님의 ${product.value}, 구매가격은${price.value}원 입니다.`;
+        // const result1 = document.querySelector("#result1");
+        // const customer = document.querySelector("#customer").value;
+        // const product = document.querySelector("#product").value;
+        // const price = document.querySelector("#price").value;
+        result1.innerHTML = `${customer.value}님의 구매 상품은 ${product.value}, 구매 가격은 ${price.value}원 입니다.`;
       }
     </script>
 
@@ -92,11 +88,10 @@
 
     <script>
       function stringLength() {
-        //const result2 = document.querySelector("#result2");
-        //const text1 = document.querySelector("#text1").value;
-        //console.log(text1.length);
+        // const text = document.querySelector("#text1");
+        // const result = document.querySelector("#result2");
 
-        result2.innerHTML = `보기의 문자열 길이는 ${text1.value.length} 글자입니다.`;
+        result2.innerHTML = `보기의 문자열 길이는 ${text1.value.length}글자 입니다.`;
       }
     </script>
 
@@ -122,33 +117,29 @@
 
     <script>
       function stringSplit() {
-        const la1 = document.querySelector("#la1").innerHTML;
-        const result3 = document.querySelector("#result3");
-        //console.log(la1.split(","));
+        // const label = document.querySelector("#la1");
+        // const result = document.querySelector("#result3");
+        const arr = la1.innerHTML.split(",");
 
+        /* ol & li로 푼 방법
         const ol = document.createElement("ol");
-        const arr = la1.split(",");
 
-        // for (let i = 0; i < arr.length; i++) {
-        //   //console.log(typeof i);
-        //   console.log(i + 1, arr[i]);
-        // }
-        // result3.innerHTML = `${i + 1}. ${arr[i]}<br>`;
-
-        for (let i in arr) {
-          //console.log(typeof i);
-          //console.log(`${Number(i) + 1}. ${arr[i]}`);
-          result3.innerHTML += `${Number(i) + 1}. ${arr[i]}<br>`;
+        for (let data of arr) {
+          const li = document.createElement("li");
+          li.innerHTML = data;
+          ol.appendChild(li);
         }
 
-        // /*ol & li로 푼 방법*/
-        // for (let data of arr) {
-        //   const li = document.createElement("li");
-        //   li.innerHTML = data;
-        //   ol.appendChild(li);
-        //   //console.log(data);
-        // }
-        // result3.appendChild(ol);
+        result.appendChild(ol);
+        */
+
+        // for(let i = 0; i < arr.length; i++) {}
+
+        for (let i in arr) {
+          // console.log(typeof i);
+          // console.log(`${Number(i) + 1}. ${arr[i]}`);
+          result3.innerHTML += `${Number(i) + 1}. ${arr[i]}<br>`;
+        }
       }
     </script>
 
@@ -190,19 +181,21 @@
 
     <script>
       function arrayTest() {
-        const preview = document.querySelector("#preview");
-        const remove = document.querySelector("#remove");
-        const add = document.querySelector("#add");
-        const result4 = document.querySelector("#result4");
+        // const preview = document.querySelector("#preview");
+        // const remove = document.querySelector("#remove");
+        // const add = document.querySelector("#add");
+        // const result = document.querySelector("#result4");
+
         const arr = preview.innerHTML.split(" ");
-        //배열에서 인덱스 찾기
+        // 배열에서 인덱스 찾기
         const index = arr.indexOf(remove.value);
-        //console.log(index);
-        //배열에서 삭제
+
+        // 배열에서 삭제
         arr.splice(index, 1);
-        //배열에 추가
+
+        // 배열에 추가
         arr.push(add.value);
-        //console.log(arr.join(" "));
+
         result4.innerHTML = arr.join(" ");
       }
     </script>
@@ -244,23 +237,22 @@
 
     <script>
       function Student(name, age, addr) {
-        //입력
         this.name = name;
         this.age = age;
         this.addr = addr;
       }
       function addStudent() {
+        // 입력
         const arr = [];
         for (let i = 0; i < 3; i++) {
-          const name = prompt(`${i + 1}번째 학생 이름`);
-          const age = prompt(`${i + 1}번째 학생 나이`);
-          const addr = prompt(`${i + 1}번째 학생 주소`);
+          const name = prompt(`${i + 1}번째 학생 이름 입력`);
+          const age = prompt(`${i + 1}번째 학생 나이 입력`);
+          const addr = prompt(`${i + 1}번째 학생 주소 입력`);
           const student = new Student(name, age, addr);
           arr.push(student);
         }
-        console.log(arr);
 
-        //출력
+        // 출력
         const names = document.querySelectorAll(".name");
         const ages = document.querySelectorAll(".age");
         const addrs = document.querySelectorAll(".addr");

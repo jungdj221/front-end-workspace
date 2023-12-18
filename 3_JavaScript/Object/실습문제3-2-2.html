@@ -10,8 +10,9 @@
     <h2 id="clock"></h2>
 
     <input type="date" id="date" />
-    <button onclick="dday()">D-day</button>
+    <button onclick="dday()">D-Day</button>
     <div id="result"></div>
+
     <script>
       function dday() {
         const result2 = new Date(date.value);
@@ -20,29 +21,40 @@
         result.innerHTML = `D-${day}`;
       }
     </script>
+
     <script>
-      //Date, Math객체
-      //날짜 - 날짜 = 밀리세컨드 (1초 = 밀리세컨드/1000)
-      //60초 =1분, 60분 =1시간, 24시간=1일
-
       const last = new Date("2024-01-01 00:00:00");
-
-      function time() {
+      function count() {
         const now = new Date();
-        const clock = document.querySelector("#clock");
         const result = last - now;
-        const day = Math.floor(result / (1000 * 60 * 60 * 24));
-        const hour = Math.floor((result / (1000 * 60 * 60)) % 24);
-        const min = Math.floor((result / (1000 * 60)) % 60);
-        const seconds = Math.floor((result / 1000) % 60);
-        clock.innerHTML = `${day}d ${hour}h ${min}m ${seconds}s`;
-        //console.log(day);
-        //console.log(hour);
-        //console.log(min);
-        //console.log(seconds);
+
+        const day = String(Math.floor(result / (1000 * 60 * 60 * 24))).padStart(
+          2,
+          "0"
+        );
+        const hour = String(
+          Math.floor((result / (1000 * 60 * 60)) % 24)
+        ).padStart(2, "0");
+        const minute = String(Math.floor((result / (1000 * 60)) % 60)).padStart(
+          2,
+          "0"
+        );
+        const second = String(Math.floor((result / 1000) % 60)).padStart(
+          2,
+          "0"
+        );
+
+        clock.innerHTML = `${day}d ${hour}h ${minute}m ${second}s`;
       }
+
       count();
+
       setInterval(count, 1000);
+
+      // Date, Math 객체
+      // 날짜 - 날짜 = 밀리세컨드 (1초 = 밀리세컨드/1000)
+      // 60초 = 1분, 60분 = 1시간, 24시간 = 1일
+      // setInterval
     </script>
   </body>
 </html>

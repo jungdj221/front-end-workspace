@@ -1,25 +1,26 @@
 const images = document.querySelectorAll(".images img");
+const span = document.querySelector("#click span");
 let count = 0;
-const span = document.querySelector("#click");
+
 function clickHandler() {
   span.innerHTML = ++count;
   const random = [
-    Math.floor(random() * 3) + 1,
-    Math.floor(random() * 3) + 1,
-    Math.floor(random() * 3) + 1,
+    Math.floor(Math.random() * 3) + 1,
+    Math.floor(Math.random() * 3) + 1,
+    Math.floor(Math.random() * 3) + 1,
   ];
   for (let i = 0; i < images.length; i++) {
-    images[i].setAttribute("src", `../../resources/spy${i}.jpg`);
+    images[i].setAttribute("src", `../../resources/spy${random[i]}.jpg`);
   }
 
   if (random[0] === random[1] && random[1] === random[2]) {
-    //alert("일치");
-    result.innerHTML = "Congratulation!! Press restart to play again~~!!";
+    result.innerHTML = "Congratulation!! Press restart to play again~!!";
     click.setAttribute("disabled", "disabled");
   }
 }
 click.addEventListener("click", clickHandler);
-function restatHeandler() {
+
+function restartHandler() {
   for (let i = 0; i < images.length; i++) {
     images[i].setAttribute("src", `../../resources/spy${i + 1}.jpg`);
   }
@@ -28,4 +29,4 @@ function restatHeandler() {
   span.innerHTML = "";
   result.innerHTML = "";
 }
-restart.addEventListener("click", restatHeandler);
+restart.addEventListener("click", restartHandler);
