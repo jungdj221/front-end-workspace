@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+      }
+      form {
+        border: 2px solid #999;
+      }
+      span {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <label for="userName">test</label>
+        <input type="text" id="userName" name="userName" />
+        <span id="userNameResult">첫글자는 영문 그후는 한글로 5~10글자</span>
+      </div>
+    </form>
+
+    <script>
+      userName.addEventListener("input", function () {
+        const regExp = /^[a-zA-z][가-힣]{4,9}$/;
+        if (regExp.test(userName.value)) {
+          userNameResult.style.color = "green";
+          userNameReesult.innerHTML = "good, move to next!";
+        } else {
+          userNameResult.style.color = "red";
+          userNameResult.innerHTML = "첫글자는 영문 그후는 한글로 5~10글자";
+        }
+      });
+    </script>
+  </body>
+</html>

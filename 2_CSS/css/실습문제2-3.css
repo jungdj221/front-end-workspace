@@ -1,94 +1,56 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
 header {
-  position: fixed;
-  display: inline-block;
-  height: 100vh;
-  width: 30rem;
   background-image: url(../../resources/background_720.jpg);
-  background-size: cover;
-  background-position: center; /*css background img쓰면 cover, center는 함께*/
-  text-align: center;
+  background-position: center;
   background-repeat: no-repeat;
-}
-.header-content {
+  background-size: cover;
   width: 30rem;
   height: 100vh;
-  background-color: rgba(128, 128, 128, 0.5);
-} /*이게 원래 header blackbox가 들어가야함 원래는 사진 위에 blackbox위에 글씨 순.*/
-/* 
-.header-blackbox {
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    opacity: 30% (이걸로 투명도 조절해도 됨)
+  position: fixed;
+  text-align: center;
 }
-.header-content {
-    position: absolute;
-    top: 0;
-    lefr: 0;
-    color: white;
-}
-.header-content a {
-    width: 100%
-    height: 100%  (지정된 공간에 100% 다 채우기)
-    color: white;
-    display: flex; (요거는 옆으로 나열)
-    flex-direction: column (이걸로 축을 바꿔서 세로로 나열)
-    justify-content: space-between (justify-cont)
-}
-*/
-header h1 {
+header h2,
+nav a {
   color: white;
-  font-size: 4rem;
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 12px;
-  /* border-bottom: 2px solid white; 로도 같은 효과 가능
-     padding-bottom: $px;
-     width: $%;
-     text-align: center;
-     align-items: center;
-     margin-top: 80px  */
-  padding-top: 100px;
-  padding-bottom: 60%;
+  display: flex;
+  justify-content: center;
+}
+header h2 {
+  margin-top: 3rem;
+  font-size: 5rem;
+  border-bottom: 2px solid;
+  padding-bottom: 2px;
+  background: red;
+}
+header nav {
+  margin-top: 17rem;
+  font-size: 2rem;
 }
 header nav a {
-  display: flex;
-  text-decoration: none;
-  color: white;
-  flex-direction: column;
-  padding: 10px;
-  font-size: 2rem;
-  /* 작은목차 */
+  margin: 1.5rem;
 }
-/* main */
+header .blackbox {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(128, 128, 128, 0.5);
+  position: absolute;
+  z-index: -1;
+}
 main {
-  display: flex;
-  padding-left: 30rem; /* 이게 옆글자/사진 위로 올리는 용도*/
-  flex-direction: column;
+  padding-left: 32rem;
+  text-align: center;
 }
-main p,
-h2,
-img {
+main h2,
+p {
   text-align: left;
-  padding-left: 30px;
-  line-height: 2;
 }
-main section h2 {
-  font-size: 3rem;
-  margin-top: 30px;
+main h2 {
+  font-size: 2rem;
   font-weight: bold;
+  padding: 20px 0px;
 }
 main img {
-  width: 100%;
-  max-width: 800px;
-  display: block;
-  margin: auto;
-  /* display: block 랑 margin: auto는 함께 사용시 이미지 가운데 정렬 */
-  margin-bottom: 3%;
+  padding-bottom: 10px;
 }
-/* section에 display: flex;를 준다음 img쪽에만 align-self: center;해도 됨. */
+main p {
+  line-height: 2;
+}
