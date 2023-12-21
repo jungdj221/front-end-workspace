@@ -135,7 +135,7 @@ const 자식객체 = document.creatElement(문서객체이름);
 #### 이벤트 삭제
 
 ```js
-문서객체.remvoeEventListener(이벤트이름, 함수);
+문서객체.removeEventListener(이벤트이름, 함수);
 ```
 
 # 정규포현식(REGEX / REGEXP : Regular Expression)
