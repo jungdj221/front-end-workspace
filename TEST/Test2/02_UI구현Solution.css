@@ -1,0 +1,48 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+form {
+  width: 50%;
+}
+.form-content {
+  display: flex;
+  margin: 5px;
+}
+.form-content label {
+  width: 130px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+.form-content div {
+  width: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.form-content input {
+  padding: 15px 10px;
+  margin-bottom: 5px;
+}
+.form-content span {
+  height: 20px;
+  color: red;
+}
+form button {
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  color: white;
+  background-color: black;
+  padding: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
