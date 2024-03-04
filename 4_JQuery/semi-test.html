@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../2_CSS/css/reset.css" />
+  </head>
+  <body>
+    <jsp:include page="/header.jsp" />
+    <div class="mypage-container">
+      <nav class="item">
+        <ul>
+          <li>${user.nickname}님, 반갑습니다.</li>
+          <li><a href="#main-jsp-1">계정설정</a></li>
+          <li><a href="#main-jsp-2">찜목록</a></li>
+          <li><a href="#main-jsp-3">조회내역</a></li>
+        </ul>
+      </nav>
+
+      <div class="item" id="main-jsp-1">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque est
+          voluptate harum. Culpa quibusdam sed, libero facere, aliquid rerum
+          quam, distinctio laudantium voluptates quia accusantium consectetur
+          nemo reiciendis vel? Autem?
+        </p>
+      </div>
+      <div class="item" id="main-jsp-2">
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa,
+          deserunt, aperiam placeat necessitatibus deleniti delectus, culpa
+          provident sequi similique ducimus veniam ut optio eum reprehenderit
+          dolore commodi perspiciatis magni! Qui.
+        </p>
+      </div>
+      <div class="item" id="main-jsp-3">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe
+          asperiores illo neque omnis enim inventore temporibus libero tempora
+          tenetur adipisci expedita ut, officiis vel voluptas delectus pariatur.
+          Cupiditate, ea illum!
+        </p>
+      </div>
+    </div>
+    <script src="js/semi-test.js"></script>
+  </body>
+</html>
