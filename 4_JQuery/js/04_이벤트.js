@@ -80,16 +80,44 @@ $("#textarea1").on({
 
 let count = 0;
 $("#textarea2").on({
-  keyup: (e) => {
-    console.log(`keyup - e.key : ${e.key}, e.keyCode : ${e.keyCode}`);
-    count += e.index;
-    console.log(count);
+  keydown: (e) => {
+    console.log($(e.target).val().length);
+
+    let currentLength = $(e.target).val().length + 1;
+    let maxLength = parseInt($("#maxLength").text());
+
+    console.log(typeof maxLength);
+    if (currentLength > maxLength) {
+      $(e.target).val($(e.target).val().substr(0, maxLength));
+    } else {
+      $("#counter").text($(e.target).val().length + 1);
+    }
   },
 });
-while (false) {
-  $("#textarea2").on("keyup", (e) => {});
-  count++;
-  console.log(count);
-}
 
-$("counter");
+const regExp = /^[a-z][a-zA-Z0-9]{3,11}$/;
+
+$("#userId").on({
+  keyup: (e) => {
+    console.log($(e.target).val());
+    let input = $(e.target).val(); // 제이쿼리 방식
+    // e.target.value : 자바스크립트 방식
+    if (regExp.test(input)) {
+      $("#idcheck").text("굿 통과").css("color", "green");
+    } else if (input === "") {
+      $("#idcheck").text("");
+    } else {
+      $("#idcheck").text("사용불가 아이디").css("color", "red");
+    }
+  },
+});
+
+// 3. trigger 메서드
+$("#area3").click(() => {
+  let counter = $("#counter2");
+  let currentCount = parseInt(counter.text());
+  counter.text(++currentCount);
+});
+$("#btn").click(() => {
+  $("#area3").trigger("click");
+});
