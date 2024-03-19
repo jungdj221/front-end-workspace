@@ -1,0 +1,82 @@
+<!-- fully generated -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.0-rc.3/dist/quill.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/quill@2.0.0-rc.3/dist/quill.snow.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="editor">
+      <h2>Demo Content</h2>
+      <p>Preset build with <code>snow</code> theme, and some common formats.</p>
+    </div>
+
+    <button>submit</button>
+    <script>
+        const quill = new Quill("#editor", {
+          theme: "snow",
+        });
+      </script>
+  </body>
+</html> -->
+
+<!-- partialy generated-->
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/quill@2.0.0-rc.3/dist/quill.core.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.0-rc.3/dist/quill.core.js"></script>
+  </head>
+  <body>
+    <div id="editor">
+      <p>Core build with no theme, formatting, non-essential modules</p>
+    </div>
+    <script>
+      const quill = new Quill("#editor");
+    </script>
+  </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="writerAction" method="post">
+      <input type="hidden" name="bdGroup" />
+      <input type="hidden" name="bdOrder" />
+      <input type="hidden" name="bdIndent" />
+      <input
+        type="text"
+        name="bdTitle"
+        class="form-control mt-4 mb-2"
+        placeholder="제목을 입력해주세요."
+        required
+      />
+      <div class="form-group">
+        <textarea
+          class="form-control"
+          rows="10"
+          name="bdContent"
+          placeholder="내용을 입력해주세요"
+          required
+        ></textarea>
+      </div>
+      <button type="submit" class="btn btn-secondary mb-3">제출하기</button>
+    </form>
+  </body>
+</html>
