@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        #redOb{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <button id="red">qqqq</button>
+    <button id="blue">ddddddd</button>
+    <div id="redOb"></div>
+
+    <script>
+        $("#red").trigger("click", function(){
+            $("#redOb").css("background-color", "blue");
+            setTimeout(function(){
+                $("#blue").trigger("click", function(){
+                    $("#redOb").css("background-color", "red");
+                });
+            },2000);
+            
+        })
+    </script>
+</body>
+</html>

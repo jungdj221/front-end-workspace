@@ -1,0 +1,68 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+      canvas{z-index: 10;pointer-events: none; position: fixed; top: 0; transform: scale(1.1);}
+    </style>
+</head>
+<body>
+  <script src="confetti_v2.js"></script>
+<div class="buttonContainer">
+    <button class="canvasBtn" id="stopButton">Stop Confetti</button>
+    <button class="canvasBtn" id="startButton">Start Confetti</button>
+</div>
+<canvas id="canvas"></canvas>
+    
+    <script>
+        $(document).ready(function(){
+          function reAction(){
+            $("#startButton").trigger("click");
+            setTimeout(function(){
+              $("#stopButton").trigger("click");
+              }, 2000);
+          }
+          $("#startButton").on('click', function(){
+          reAction();
+          });
+        });
+      </script>
+     
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>색상 변경 예제</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("#redBtn").click(function(){
+        $("#box").css("background-color", "red");
+        setTimeout(function() {
+          $("#box").trigger("customClick");
+        }, 2000);
+      });
+
+      $("#blueBtn").click(function(){
+        $("#box").css("background-color", "blue");
+      });
+
+      $("#box").on("customClick", function() {
+        $("#blueBtn").trigger("click");
+      });
+    });
+  </script>
+</head>
+<body>
+
+<button id="redBtn">빨간색으로 변경</button>
+<button id="blueBtn">파란색으로 변경</button>
+
+<div id="box" style="width: 100px; height: 100px; background-color: white;"></div>
+
+</body>
+</html>
