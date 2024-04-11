@@ -1,0 +1,47 @@
+
+/*변수*/
+$main-color: pink;
+$primary-size: 8rem;
+
+/* mixin 문법*/
+@mixin text-center{
+    text-align: center;
+}
+
+/* 상속 */
+.border{
+    border: 8px solid gold;
+}
+
+div{
+
+    @include text-center;
+
+    background-color: black;
+    color: white;
+    font-size: 5rem;
+
+    /* scss 문법 : 이런식으로 중첩이 가능*/
+    h1{
+        &:hover{
+            background-color: $main-color;
+        }
+        color: yellow;
+    }    
+   
+}
+
+.class{
+    @extend .border;
+    background-color: green;
+    color: white;
+    font-size: $primary-size;
+
+    // @media screen and(max-width: 800px){
+    //     background-color: skyblue;
+    // }    
+}
+
+#id{
+    background-color: navy;
+}
