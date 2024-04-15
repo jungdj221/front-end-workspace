@@ -46,25 +46,27 @@ Font.whitelist = [
   "courier-new",
   "georgia",
   "helvetica",
-  "lucida",
+  "Inter",
+  "lucida"
 ];
 Quill.register(Font, true);
 
+
 // Modules object for setting up the Quill editor
-export const modules = {
+export const modules =(props)=>({
   toolbar: {
-    container: "#toolbar",
+    container: "#" + props,
     handlers: {
       undo: undoChange,
-      redo: redoChange,
-    },
+      redo: redoChange
+    }
   },
   history: {
     delay: 500,
     maxStack: 100,
-    userOnly: true,
-  },
-};
+    userOnly: true
+  }
+});
 
 // Formats objects for setting up the Quill editor
 export const formats = [
@@ -84,39 +86,49 @@ export const formats = [
   "indent",
   "link",
   "image",
+  "video",
   "color",
-  "code-block",
+  "code-block"
 ];
 
+
 // Quill Toolbar component
-export const QuillToolbar = () => (
-  <div id="toolbar">
-    <span className="ql-formats">
-      <select className="ql-font" defaultValue="arial">
-        <option value="arial">Arial</option>
-        <option value="comic-sans">Comic Sans</option>
-        <option value="courier-new">Courier New</option>
-        <option value="georgia">Georgia</option>
-        <option value="helvetica">Helvetica</option>
-        <option value="lucida">Lucida</option>
-      </select>
-      <select className="ql-size" defaultValue="medium">
-        <option value="extra-small">Size 1</option>
-        <option value="small">Size 2</option>
-        <option value="medium">Size 3</option>
-        <option value="large">Size 4</option>
-      </select>
-      <select className="ql-header" defaultValue="3">
-        <option value="1">Heading</option>
-        <option value="2">Subheading</option>
-        <option value="3">Normal</option>
-      </select>
-    </span>
+export const QuillToolbar = (props) => {
+  return  (<> 
+  {props.toolbarId !== undefined && 
+  <div id={props.toolbarId}>
+    
     <span className="ql-formats">
       <button className="ql-bold" />
       <button className="ql-italic" />
       <button className="ql-underline" />
       <button className="ql-strike" />
+    </span>
+    <span className="ql-formats">
+    <select className="ql-font">
+      <option value="arial" > Arial </option>
+      <option value="comic-sans">Comic Sans</option>
+      <option value="courier-new">Courier New</option>
+      <option value="georgia">Georgia</option>
+      <option value="helvetica">Helvetica</option>
+      <option value="Inter" selected>Inter</option>
+      <option value="lucida">Lucida</option>
+    </select>
+      <select className="ql-size">
+        <option value="extra-small">Extra Small</option>
+        <option value="small">Small</option>
+        <option value="medium" selected>Medium</option>
+        <option value="large">Large</option>
+      </select>
+      <select className="ql-header">
+        <option value="1">Heading 1</option>
+        <option value="2">Heading 2</option>
+        <option value="3">Heading 3</option>
+        <option value="4">Heading 4</option>
+        <option value="5">Heading 5</option>
+        <option value="6">Heading 6</option>
+        <option value="" selected>Normal</option>
+      </select>
     </span>
     <span className="ql-formats">
       <button className="ql-list" value="ordered" />
@@ -154,6 +166,7 @@ export const QuillToolbar = () => (
       </button>
     </span>
   </div>
-);
-
+ }
+ </>)
+ }
 export default QuillToolbar;
