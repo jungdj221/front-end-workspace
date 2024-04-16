@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Link, Navigate, useNavigate } from "react-router-dom";
-import axios from "axios";
+import { Link, useNavigate } from "react-router-dom";
+
+import { viewBoardList } from "../../api/animalBoard";
 
 // 여기서 viewAll 의 역할을 해줌
 const Home = () => {
@@ -8,9 +9,7 @@ const Home = () => {
   const [boards, setBoard] = useState([]); // 여러개 = 배열
 
   const getBoard = async () => {
-    const result = await axios.get(
-      `http://localhost:8080/compagno/animal-board`
-    );
+    const result = await viewBoardList();
     console.log(result.data);
     setBoard(result.data);
   };
@@ -20,6 +19,7 @@ const Home = () => {
 
   return (
     <>
+      <Link to="/compagno/write-board"> 글쓰기! </Link>
       <table>
         <thead>
           <tr>
@@ -31,12 +31,12 @@ const Home = () => {
           </tr>
         </thead>
         <tbody>
-          {boards.map((board) => (
+          {boards?.map((board) => (
             <tr key={board.animalBoardCode}>
-              <td>글번호</td>
+              <td>글 번호</td>
               <td>
+                <span>{board.animalCategory?.animalType}</span>
                 <a href={`/compagno/animal-board/${board.animalBoardCode}`}>
-                  {board.animalCategoryCode}
                   {board.animalBoardTitle}
                 </a>
               </td>
@@ -47,8 +47,6 @@ const Home = () => {
           ))}
         </tbody>
       </table>
-
-      {/* <div dangerouslySetInnerHTML={{ __html: board.animalBoardContent }}></div> */}
     </>
   );
 };

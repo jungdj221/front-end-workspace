@@ -5,23 +5,22 @@ import EditorToolbar, {
   formats,
 } from "../../components/EditorToolbar";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 import "react-quill/dist/quill.snow.css";
 import { addBoard } from "../../api/animalBoard";
 
 const Add = () => {
   const navigate = useNavigate();
   const [boardInfo, setboardInfo] = useState({
-    animalCategoryCode: 0,
+    animalCategoryCode: "",
     animalBoardTitle: "",
     animalBoardContent: "",
-    // animalMainImage: "",
+    animalMainImage: "",
   });
 
   const add = async () => {
-    console.log(boardInfo);
+    // console.log(boardInfo);
     await addBoard(boardInfo);
-    navigate("/compagno/");
+    navigate("/compagno/animal-board");
   };
 
   // 게시글 글 set

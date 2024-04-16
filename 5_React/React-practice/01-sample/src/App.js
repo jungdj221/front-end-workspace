@@ -3,6 +3,7 @@ import Add from "./pages/animalBoard/Add";
 import Home from "./pages/animalBoard/Home";
 import Edit from "./pages/animalBoard/Edit";
 import Detail from "./pages/animalBoard/Detail";
+import Error from "./pages/animalBoard/Error";
 
 // 여기가 router 역할
 /*
@@ -18,12 +19,16 @@ const App = createBrowserRouter([
     element: <Add />,
   },
   {
-    path: "/compagno/edit-board",
+    path: "/compagno/edit-board/:animalBoardCode",
     element: <Edit />,
   },
   {
     path: "/compagno/animal-board/:animalBoardCode",
     element: <Detail />,
+  },
+  {
+    path: "/compagno/error",
+    element: <Error />,
   },
 ]);
 
