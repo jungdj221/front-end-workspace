@@ -10,7 +10,7 @@ npm i react-router-dom
 */
 const App = createBrowserRouter([
   {
-    path: "/compagno/",
+    path: "/compagno/animal-board",
     element: <Home />,
   },
   {
@@ -22,7 +22,7 @@ const App = createBrowserRouter([
     element: <Edit />,
   },
   {
-    path: "/compagno/:animalBoardCode",
+    path: "/compagno/animal-board/:animalBoardCode",
     element: <Detail />,
   },
 ]);

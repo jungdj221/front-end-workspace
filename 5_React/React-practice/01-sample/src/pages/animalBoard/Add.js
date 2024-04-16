@@ -21,7 +21,7 @@ const Add = () => {
   const add = async () => {
     console.log(boardInfo);
     await addBoard(boardInfo);
-    navigate("/compagno");
+    navigate("/compagno/");
   };
 
   // 게시글 글 set

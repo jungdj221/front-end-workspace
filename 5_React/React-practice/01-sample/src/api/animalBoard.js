@@ -7,27 +7,27 @@ const instance = axios.create({
 
 // 글쓰기
 export const addBoard = async (boardInfo) => {
-  await axios.post(`animal-board`, boardInfo);
+ return await instance.post(`animal-board`, boardInfo);
 };
 
 // 글 전체보기
 export const viewBoardList = async () => {
-  await axios.get(`animal-board`);
+  return await instance.get(`animal-board`);
 };
 
 // 글 하나보기
 export const viewDetail = async (animalBoardCode) => {
-  await axios.get(`animal-board/` + animalBoardCode);
+  return await instance.get(`animal-board/` + animalBoardCode);
 };
 
 // 글 수정
 export const updateBoard = async (updatedInfo) => {
-  await axios.put(`animal-board`, updatedInfo);
+  return await instance.put(`animal-board`, updatedInfo);
 };
 
 // 글 삭제
 export const delBoard = async (animalBoardCode) => {
-  await axios.delete(`animal-board/` + animalBoardCode);
+  return await instance.delete(`animal-board/` + animalBoardCode);
 };
 
 /*
