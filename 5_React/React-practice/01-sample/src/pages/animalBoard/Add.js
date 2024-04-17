@@ -55,6 +55,7 @@ const Add = () => {
           }))
         }
       >
+        <option value="default">-- 어떤 동물인가요 --</option>
         <option value="1">개</option>
         <option value="2">고양이</option>
         <option value="3">비둘기</option>

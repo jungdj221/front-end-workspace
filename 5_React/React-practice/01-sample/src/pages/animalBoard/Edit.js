@@ -24,7 +24,7 @@ const Edit = () => {
     animalBoardView: 0,
     animalBoardCode: animalBoardCode,
   });
-
+  // 수정시 카테고리 미변경이면 0이 그대로 들어가짐
   const animalBoardAPI = async () => {
     const response = await viewDetail(animalBoardCode);
     // console.log(response);
