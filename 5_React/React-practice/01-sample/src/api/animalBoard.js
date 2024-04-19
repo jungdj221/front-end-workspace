@@ -1,6 +1,22 @@
 import axios from "axios";
 
-// 전역주소
+const getToken = ()=>{
+  return localStorage.getItem("token");
+};
+
+// 인증이 필요한 RESTFUL API 가져올때 기본 루트
+const authorize = axios.create({
+  baseURL: "http://localhost:8080/compagno/"
+});
+authorize.interceptors.request.use((config)=>{
+  const token = getToken();
+  if(token){
+    config.headers.Authorization = `Bearer ${token}`
+  }
+  return config;
+})
+
+// 인증 필요없는 RESTFUL API 가져올때 기본 루트
 const instance = axios.create({
   baseURL: "http://localhost:8080/compagno/",
 });
@@ -29,6 +45,24 @@ export const updateBoard = async (updatedInfo) => {
 export const delBoard = async (animalBoardCode) => {
   return await instance.delete(`animal-board/` + animalBoardCode);
 };
+
+// ==========================================================================================//
+
+// 게시글 댓글 불러오기
+export const getComments = async (animalBoardCode)=>{
+  return await instance.get("animal-board/" + animalBoardCode + "/comment");
+}
+
+// 게시글 댓글 수정
+export const updateComment = async (data)=>{
+  return await authorize.put("comment", data)
+}
+
+// 게시글 삭제
+export const delComment = async (commentCode)=>{
+  return await authorize.delete("comment/" + commentCode);
+}
+
 
 /*
 private String id; // 유저정보

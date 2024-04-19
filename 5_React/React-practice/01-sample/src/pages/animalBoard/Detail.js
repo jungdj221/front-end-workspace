@@ -1,7 +1,21 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { viewDetail } from "../../api/animalBoard";
+import { viewDetail, getComments } from "../../api/animalBoard";
 import { Link } from "react-router-dom";
+import { Form, InputGroup, Button } from "react-bootstrap";
+import styled from "styled-components";
+
+const Comment = styled.div`
+  .animal-board-comment{
+    display: flex;
+    
+    input-group{
+      display: flex;
+      width: 50%;
+    }
+
+  }
+`;
 
 const Detail = () => {
   const navigate = useNavigate();
@@ -19,13 +33,22 @@ const Detail = () => {
 
   const animalBoardAPI = async () => {
     const response = await viewDetail(animalBoardCode);
-    console.log(response);
+    // console.log(response);
     setDetail(response.data);
-    console.log(response.data);
+    // console.log(response.data);
   };
+
+  // 댓글 불러오기
+  const [comments, setComments] = useState([]);
+  const animalBoardCommentAPI = async ()=>{
+    const response = await getComments(animalBoardCode);
+    console.log(response.data);
+    setComments(response.data);
+  }
 
   useEffect(() => {
     animalBoardAPI();
+    animalBoardCommentAPI();
   }, []);
 
   // Link에 대해 알아보기 글쓰기 시작 버튼을 할 수있음 상세페이지에서
@@ -62,6 +85,34 @@ const Detail = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="animal-board-comment-contents">
+        {comments.map((comment)=>(
+          <div className="animal-board-comment-content" key={comment.animalBoardCommentCode}>
+           
+              <p>{comment.user.userNickname} {comment.animalCommentDate}</p>
+            <input value={comment.animalCommentContent} readOnly/>
+           
+            {comment.replies.map((reply)=>(
+              <div className="animal-board-comment-content-reply" key={reply.animalBoardCommentCode}>
+                <p>{reply.user.userNickname} {reply.animalCommentDate}</p>
+            <input value={reply.animalCommentContent} readOnly/>
+              </div>
+            ))}
+            
+            
+          </div>
+          
+        ))}
+      </div>
+      <div className="animal-board-comment container-sm">
+      <InputGroup>
+      
+        <InputGroup.Text>With textarea</InputGroup.Text>
+        <Form.Control as="textarea" aria-label="With textarea" />
+      
+        <Button variant="secondary">댓글추가!</Button>
+      </InputGroup>
       </div>
     </>
   );
