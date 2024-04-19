@@ -1,6 +1,6 @@
 import { addAnimal } from "../api/animal";
 import styled from "styled-components";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Div = styled.div`
@@ -28,7 +28,6 @@ const Div = styled.div`
     color: white;
   }
 `;
-
 const Create = () => {
   const navigate = useNavigate();
   const [animal, setAnimal] = useState({});

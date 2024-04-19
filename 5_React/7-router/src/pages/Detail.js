@@ -28,7 +28,6 @@ const Div = styled.div`
     color: white;
   }
 `;
-
 const Detail = () => {
   const navigate = useNavigate();
   const { no } = useParams();
