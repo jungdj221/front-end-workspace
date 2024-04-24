@@ -7,6 +7,7 @@ import EditorToolbar, {
 import { useNavigate } from "react-router-dom";
 import "react-quill/dist/quill.snow.css";
 import { addBoard } from "../../api/animalBoard";
+import ImageEditor from "../../components/ImageEditor";
 
 const Add = () => {
   const navigate = useNavigate();

@@ -4,6 +4,7 @@ import Home from "./pages/animalBoard/Home";
 import Edit from "./pages/animalBoard/Edit";
 import Detail from "./pages/animalBoard/Detail";
 import Error from "./pages/animalBoard/Error";
+import ImageExtractor from "./components/ImageEditor";
 
 // 여기가 router 역할
 /*
@@ -29,6 +30,10 @@ const App = createBrowserRouter([
   {
     path: "/compagno/error",
     element: <Error />,
+  },
+  {
+    path: "/compagno/imageTester",
+    element: <ImageExtractor />,
   },
 ]);
 

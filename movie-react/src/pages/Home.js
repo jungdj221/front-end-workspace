@@ -16,6 +16,12 @@ const Table = styled.table`
 const Div = styled.div`
   display: flex;
   justify-content: center;
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    font-weight: bold;
+  }
 `;
 const Home = () => {
   const [movies, setMovies] = useState([]);

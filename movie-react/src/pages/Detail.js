@@ -6,13 +6,20 @@ import styled from "styled-components";
 const Div = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 80%;
+  /* background-color: red; */
   input {
+    width: 100%;
     margin-bottom: 10px;
     border-radius: 5px;
     border: 1px solid grey;
     padding: 7px;
   }
   button {
+    width: 100%;
     border-radius: 5px;
     border: 1px solid grey;
     padding: 7px;
@@ -22,8 +29,11 @@ const Div = styled.div`
   div {
     display: flex;
     justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
     h1 {
       font-size: 3rem;
+      font-weight: bold;
     }
   }
 `;

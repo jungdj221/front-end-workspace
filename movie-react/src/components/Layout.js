@@ -8,6 +8,7 @@ const Header = styled.header`
   a {
     color: black;
     text-decoration: none;
+    margin-top: 20px;
   }
 `;
 
