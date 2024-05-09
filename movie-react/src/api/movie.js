@@ -9,19 +9,20 @@ export const getMovies = async () => {
   return await instance.get("movie");
 };
 
-// // 하나보기
-// export const getMovie = async (no) => {
-//   return await instance.get("movie/" + no);
-// };
+// 하나보기
+export const getMovie = async (code) => {
+  return await instance.get(`movie/${code}`);
+};
+
 // 추가
 export const insertMovie = async (data) => {
   return await instance.post("movie", data);
 };
 
-// // 수정
-// export const updateMovie = async (data) => {
-//   return await instance.put("movie", data);
-// };
+// 수정
+export const updateMovie = async (data) => {
+  return await instance.put("movie", data);
+};
 
 // 삭제
 

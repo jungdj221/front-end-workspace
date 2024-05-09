@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getMovies, deleteMovie } from "../api/movie";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 const Table = styled.table`
   text-align: center;
@@ -10,6 +11,12 @@ const Table = styled.table`
   }
   td {
     padding-bottom: 10px;
+  }
+  tr {
+    cursor: pointer;
+    &:hover {
+      background-color: lightblue;
+    }
   }
 `;
 
@@ -24,6 +31,7 @@ const Div = styled.div`
   }
 `;
 const Home = () => {
+  const navigate = useNavigate();
   const [movies, setMovies] = useState([]);
 
   const movieAPI = async () => {
@@ -38,6 +46,9 @@ const Home = () => {
     movieAPI();
   };
 
+  const getDetail = async (no) => {
+    navigate("/detail/" + no);
+  };
   useEffect(() => {
     movieAPI();
   }, []);
@@ -57,7 +68,7 @@ const Home = () => {
         </thead>
         <tbody>
           {movies.map((movie) => (
-            <tr key={movie.no}>
+            <tr key={movie.no} onClick={() => getDetail(movie.no)}>
               <td>{movie.title}</td>
               <td>{movie.genre}</td>
               <td>{movie.actor}</td>
